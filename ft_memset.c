@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: miyatasoujo <miyatasoujo@student.42.fr>    +#+  +:+       +#+        */
+/*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 21:41:23 by miyatasoujo       #+#    #+#             */
-/*   Updated: 2024/10/25 00:29:06 by miyatasoujo      ###   ########.fr       */
+/*   Updated: 2024/10/25 12:40:19 by sosmiyat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void *ft_memset(void *s, int c, size_t n)
     // n = セットするバイト数｀
     
     // int c に関してはunsigned charに変換される
-    // ｀nを0になるまでループさせ中で
+    // ｀nを0になるまでループさせ中で、cを
 
     unsigned char *p  = (unsigned char *)s;
 
