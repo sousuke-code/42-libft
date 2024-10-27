@@ -6,7 +6,7 @@
 /*   By: miyatasoujo <miyatasoujo@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 15:35:33 by sosmiyat          #+#    #+#             */
-/*   Updated: 2024/10/28 00:01:19 by miyatasoujo      ###   ########.fr       */
+/*   Updated: 2024/10/28 00:06:43 by miyatasoujo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void ft_bzero(void *s, size_t n);
 
 void *ft_calloc(size_t count, size_t size);
 
-int ft_isalnum(char c);
+int ft_isalnum(int c);
 
 int ft_isalpha(int c);
 
