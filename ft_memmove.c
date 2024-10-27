@@ -6,11 +6,12 @@
 /*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 01:45:12 by miyatasoujo       #+#    #+#             */
-/*   Updated: 2024/10/25 12:49:39 by sosmiyat         ###   ########.fr       */
+/*   Updated: 2024/10/27 15:53:42 by sosmiyat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dist, const void *src, size_t n)
 {

@@ -6,11 +6,12 @@
 /*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 11:34:23 by sosmiyat          #+#    #+#             */
-/*   Updated: 2024/10/27 12:38:57 by sosmiyat         ###   ########.fr       */
+/*   Updated: 2024/10/27 15:54:43 by sosmiyat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include "libft.h"
 
 void change_words(unsigned int i, char *str)
 {

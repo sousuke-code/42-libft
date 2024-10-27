@@ -6,12 +6,13 @@
 /*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 12:00:37 by sosmiyat          #+#    #+#             */
-/*   Updated: 2024/10/26 12:59:05 by sosmiyat         ###   ########.fr       */
+/*   Updated: 2024/10/27 15:55:43 by sosmiyat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "libft.h"
 
 int ft_strlen(char *c)
 {

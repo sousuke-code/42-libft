@@ -6,11 +6,12 @@
 /*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 13:53:37 by sosmiyat          #+#    #+#             */
-/*   Updated: 2024/10/27 13:56:55 by sosmiyat         ###   ########.fr       */
+/*   Updated: 2024/10/27 15:54:06 by sosmiyat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include "libft.h"
 
 int ft_strlen(char *c)
 {

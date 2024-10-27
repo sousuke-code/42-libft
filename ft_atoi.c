@@ -6,12 +6,13 @@
 /*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 18:57:48 by miyatasoujo       #+#    #+#             */
-/*   Updated: 2024/10/26 11:54:29 by sosmiyat         ###   ########.fr       */
+/*   Updated: 2024/10/27 15:52:42 by sosmiyat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <limits.h>
+#include "libft.h"
 
 
 

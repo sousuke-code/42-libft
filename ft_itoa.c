@@ -6,12 +6,13 @@
 /*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 01:05:31 by miyatasoujo       #+#    #+#             */
-/*   Updated: 2024/10/27 11:31:09 by sosmiyat         ###   ########.fr       */
+/*   Updated: 2024/10/27 15:53:24 by sosmiyat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "libft.h"
 
 int	count_digits(int n)
 {

@@ -6,12 +6,13 @@
 /*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 21:41:23 by miyatasoujo       #+#    #+#             */
-/*   Updated: 2024/10/25 12:40:19 by sosmiyat         ###   ########.fr       */
+/*   Updated: 2024/10/27 15:53:47 by sosmiyat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include <stdio.h>
+#include "libft.h"
 #define BUF_SIZE 16
 
 void *ft_memset(void *s, int c, size_t n)
