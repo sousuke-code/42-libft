@@ -6,7 +6,7 @@
 /*   By: miyatasoujo <miyatasoujo@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 01:45:12 by miyatasoujo       #+#    #+#             */
-/*   Updated: 2024/10/27 23:30:20 by miyatasoujo      ###   ########.fr       */
+/*   Updated: 2024/10/27 23:58:09 by miyatasoujo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memmove(void *dist, const void *src, size_t n)
 	unsigned char *p = (unsigned char *)dist;
 	src_cpy = (const unsigned char *)src;
 
-	if(dist == NULL && src == NUL) {
+	if(dist == NULL && src == NULL) {
 		return NULL;
 	}
 

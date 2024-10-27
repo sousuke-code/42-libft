@@ -6,15 +6,16 @@
 /*   By: miyatasoujo <miyatasoujo@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 20:59:09 by miyatasoujo       #+#    #+#             */
-/*   Updated: 2024/10/27 20:01:03 by miyatasoujo      ###   ########.fr       */
+/*   Updated: 2024/10/28 00:00:49 by miyatasoujo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "libft.h"
 
-int ft_isdigit(char c)
+int ft_isdigit(int c)
 {
+    
     if (c >= '0' && c <= '9')
     {
         return 1;
