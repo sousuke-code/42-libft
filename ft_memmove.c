@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
+/*   By: miyatasoujo <miyatasoujo@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 01:45:12 by miyatasoujo       #+#    #+#             */
-/*   Updated: 2024/10/27 15:53:42 by sosmiyat         ###   ########.fr       */
+/*   Updated: 2024/10/27 20:01:32 by miyatasoujo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,4 @@ void	*ft_memmove(void *dist, const void *src, size_t n)
 	}
 
 	return (dist);
-}
-
-int main(void)
-{
-    char str[]  = "Hello, World!";
-    ft_memmove(str+7, str, 5);
-    printf("%s", str);
 }

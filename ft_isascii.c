@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
+/*   By: miyatasoujo <miyatasoujo@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 21:15:31 by miyatasoujo       #+#    #+#             */
-/*   Updated: 2024/10/27 15:53:16 by sosmiyat         ###   ########.fr       */
+/*   Updated: 2024/10/27 20:00:58 by miyatasoujo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,4 @@ int ft_isascii(int c)
         return 0;
     }
 
-}
-
-int main(void)
-{
-   int i = 'A';
-   printf("%d", ft_isascii(i));
-    
 }

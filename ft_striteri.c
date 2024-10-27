@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
+/*   By: miyatasoujo <miyatasoujo@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 11:34:23 by sosmiyat          #+#    #+#             */
-/*   Updated: 2024/10/27 15:54:43 by sosmiyat         ###   ########.fr       */
+/*   Updated: 2024/10/27 20:02:00 by miyatasoujo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,4 @@ void ft_striteri(char *s, void (*f)(unsigned int, char*))
         s++;
         i++;
     }
-}
-
-int main(void) {
-    char str[] = "abcdef";
-    
-    ft_striteri(str, change_words); 
-    
-    printf("%s\n", str); 
 }

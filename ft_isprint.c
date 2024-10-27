@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
+/*   By: miyatasoujo <miyatasoujo@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 15:56:08 by sosmiyat          #+#    #+#             */
-/*   Updated: 2024/10/27 15:56:11 by sosmiyat         ###   ########.fr       */
+/*   Updated: 2024/10/27 20:01:07 by miyatasoujo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,3 @@ int ft_isprint(int c)
 
 }
 
-
-int main(void)
-{
-
-    int c = 'A';
-    printf("%d", ft_isprint(c));
-    
-}

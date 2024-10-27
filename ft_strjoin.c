@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
+/*   By: miyatasoujo <miyatasoujo@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 13:01:01 by sosmiyat          #+#    #+#             */
-/*   Updated: 2024/10/27 15:54:47 by sosmiyat         ###   ########.fr       */
+/*   Updated: 2024/10/27 20:05:53 by miyatasoujo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,13 @@
 #include <stdio.h>
 #include "libft.h"
 
-int ft_strlen(char *c)
-{
-    int i;
-    i = 0;
-
-    while (*c != '\0')
-    {
-      i++;
-      c++;
-    }
-
-    return i;
-}
 
 char	*ft_strcat(char *dest, char *src)
 {
 	int	i;
 	int	dest_len;
-	int	src_len;
 
 	dest_len = ft_strlen(dest);
-	src_len = ft_strlen(src);
 	i = 0;
 	while (src[i] != '\0')
 	{
@@ -77,12 +62,3 @@ char *ft_strjoin(char const *s1 , char const *s2)
     return str;
 }
 
-
-int main(void)
-{
-    char *str1 = "cat";
-    char *str2 = "hello";
-    // ft_strjoin(str1, str2);
-    printf("%s", ft_strjoin(str1, str2));
-    
-}

@@ -1,4 +1,6 @@
 NAME = libft.a
+
+# ソースファイルのリスト
 SRCS =	ft_strlen.c \
 		ft_strlcpy.c \
 		ft_strlcat.c \
@@ -28,23 +30,41 @@ SRCS =	ft_strlen.c \
 		ft_split.c \
 		ft_itoa.c \
 		ft_strmapi.c \
-		ft_striteri.c\
+		ft_striteri.c \
 		ft_putchar_fd.c \
 		ft_putstr_fd.c \
 		ft_putendl_fd.c \
 		ft_putnbr_fd.c
-OBJS = $(SRCS:%.c = %.o)
 
-all : $(NAME)
+# オブジェクトファイルのリスト
+OBJS = $(SRCS:.c=.o)
 
-$(NAME) : $(OBJS)
+# コンパイラとフラグ
+CC = cc
+CFLAGS = -Wall -Wextra -Werror
+
+# デフォルトターゲット
+all: $(NAME)
+
+# ライブラリの作成ルール
+$(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
-.c.o:
-	cc -Wall -Wextra -Werror 0c $< o $@
+# ダミーのボーナスターゲットを追加
+bonus:
+	@echo "No bonus implemented"
 
+# オブジェクトファイルを生成するルール
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+# クリーンアップ
 clean:
 	rm -f $(OBJS)
-fclean:
+
+# 全ての生成ファイルの削除
+fclean: clean
 	rm -f $(NAME)
+
+# 再ビルド
 re: fclean all

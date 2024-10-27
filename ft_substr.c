@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
+/*   By: miyatasoujo <miyatasoujo@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 12:00:37 by sosmiyat          #+#    #+#             */
-/*   Updated: 2024/10/27 15:55:43 by sosmiyat         ###   ########.fr       */
+/*   Updated: 2024/10/27 20:04:57 by miyatasoujo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,6 @@
 #include <stdlib.h>
 #include "libft.h"
 
-int ft_strlen(char *c)
-{
-    int i;
-
-    i = 0;
-
-    while (*c != '\0')
-    {
-        i++;
-        c++;
-    }
-    return i;
-}
 
 char *ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -36,7 +23,7 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
     char *ans;
     ans = malloc(len+1);
     
-    int s_len;
+    unsigned int s_len;
     unsigned int index;
     unsigned int  i;
     i = 0;
@@ -80,11 +67,3 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 }
 
 
-int main(void)
-{
-
-    printf("%s", ft_substr("aiueo", 2, 2));
-    char *str1 =  "hello";
-    printf("%s", ft_substr(str1, 2, 2));
-
-}

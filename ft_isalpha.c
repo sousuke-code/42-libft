@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
+/*   By: miyatasoujo <miyatasoujo@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 20:54:54 by miyatasoujo       #+#    #+#             */
-/*   Updated: 2024/10/27 15:53:13 by sosmiyat         ###   ########.fr       */
+/*   Updated: 2024/10/27 20:00:53 by miyatasoujo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,4 @@ int ft_alpha(int c)
     else {
         return 0;
     }
-}
-
-
-int main (void)
-{
-    char c = '1';
-    printf("%d", ft_alpha(c));
 }

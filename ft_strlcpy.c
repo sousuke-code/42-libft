@@ -38,9 +38,3 @@ size_t ft_strlcpy(char *dst, const char *src, size_t size)
 }
 
 
-int main(void)
-{
-    char s[4] = {'-','-','-','-'};
-    printf("%zu", ft_strlcpy(s, "abczzzzzz", 3));
-    printf("%s",s);
-}

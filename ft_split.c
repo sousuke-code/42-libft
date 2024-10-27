@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
+/*   By: miyatasoujo <miyatasoujo@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 22:13:07 by miyatasoujo       #+#    #+#             */
-/*   Updated: 2024/10/27 15:54:32 by sosmiyat         ###   ########.fr       */
+/*   Updated: 2024/10/27 20:06:26 by miyatasoujo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,20 +33,6 @@ int count_words (char const *s, char c)
        s++;
     }
     return i;
-}
-
-void *ft_memcpy(void *dist, const void *src, size_t n)
-{
-    unsigned char *p = (unsigned char *)dist;
-    const unsigned char *pp = (const unsigned char *)src;
-    while (n > 0)
-    {
-        *p = *pp;
-        p++;
-        pp++;
-        n--;
-    }
-    return dist;
 }
 
 
@@ -88,21 +74,3 @@ char **ft_split(char const *s, char c)
     return ans;
 }
 
-int main(void)
-{
-    char **ans;
-    int i = 0;
-    char *c = "AAABBBAADDDDAADDDD";
-    char d = 'A';
-    ans = ft_split(c, d);
-
-    // 各単語を出力
-    while (ans[i]) {
-        printf("%s\n", ans[i]);
-        free(ans[i]);  // メモリの解放
-        i++;
-    }
-    free(ans);  // 配列自体の解放
-
-    return 0;
-}

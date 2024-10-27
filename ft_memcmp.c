@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
+/*   By: miyatasoujo <miyatasoujo@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 14:58:12 by sosmiyat          #+#    #+#             */
-/*   Updated: 2024/10/27 15:53:33 by sosmiyat         ###   ########.fr       */
+/*   Updated: 2024/10/27 20:01:24 by miyatasoujo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,3 @@ int ft_memcmp(const void *s1,const void *s2, size_t n)
 
 }
 
-int main(void)
-{
-    
-}
