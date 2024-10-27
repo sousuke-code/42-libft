@@ -6,7 +6,7 @@
 /*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 01:05:31 by miyatasoujo       #+#    #+#             */
-/*   Updated: 2024/10/27 11:28:32 by sosmiyat         ###   ########.fr       */
+/*   Updated: 2024/10/27 11:31:09 by sosmiyat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ int	count_digits(int n)
 		n = -n;
 		count++;
 	}
+
 	while (n > 0)
 	{
 		n = n / 10;
@@ -43,13 +44,12 @@ char	*ft_itoa(int n)
 
 	sign = 0;
 	len = count_digits(n);
+	str = malloc(len + 1);
 	if (n < 0)
 	{
 		n = -n;
 		str[0] = '-';
 	}
-
-	str = malloc(len + 1);
 	while (n > 0)
 	{
 		str[len-1] = (n % 10) + '0';
@@ -61,7 +61,7 @@ char	*ft_itoa(int n)
 
 int	main(void)
 {
-	int i = 19899898;
+	int i = -19899;
 	char *ans;
 	ans = ft_itoa(i);
 	printf("%s\n", ans);
