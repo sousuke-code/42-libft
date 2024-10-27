@@ -6,7 +6,7 @@
 /*   By: miyatasoujo <miyatasoujo@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 20:54:54 by miyatasoujo       #+#    #+#             */
-/*   Updated: 2024/10/27 23:21:45 by miyatasoujo      ###   ########.fr       */
+/*   Updated: 2024/10/28 00:05:12 by miyatasoujo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 int ft_isalpha(int c)
 {
-    if(c >= 'A' && c <= 'C')
+    if(c >= 'A' && c <= 'Z')
     {
         return 1;
     }
