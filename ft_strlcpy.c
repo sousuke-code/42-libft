@@ -24,6 +24,9 @@ size_t ft_strlcpy(char *dst, const char *src, size_t size)
     { 
       n++;  
     }
+    if (size == 0) {
+      return n;
+    }
     size_t i = 0; //戻り地で返すsrcの長さ
     while (i  < size -1 && *src != '\0')
     {
