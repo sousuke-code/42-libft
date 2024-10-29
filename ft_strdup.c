@@ -6,7 +6,7 @@
 /*   By: miyatasoujo <miyatasoujo@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 01:19:58 by miyatasoujo       #+#    #+#             */
-/*   Updated: 2024/10/27 20:06:03 by miyatasoujo      ###   ########.fr       */
+/*   Updated: 2024/10/29 09:45:47 by miyatasoujo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "libft.h"
 
 
-char *strdup(const char *s1)
+char *ft_strdup(const char *s1)
 {
     char *p;
     int i;
