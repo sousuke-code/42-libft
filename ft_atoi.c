@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
+/*   By: miyatasoujo <miyatasoujo@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 18:57:48 by miyatasoujo       #+#    #+#             */
-/*   Updated: 2024/10/27 15:52:42 by sosmiyat         ###   ########.fr       */
+/*   Updated: 2024/10/29 09:40:24 by miyatasoujo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int ft_atoi(const char *string)
 {
  long result;
  int sign;
- sign = 0;
+ sign = 1;
  result = 0;
 
  while(*string == '\t' || *string == '\n' || *string == '\v' || *string == '\f' || *string == '\r' || *string == ' ')
@@ -53,7 +53,7 @@ int ft_atoi(const char *string)
     }
 
     if (sign == -1){
-        if (LONG_MIN / 10 < result || (LONG_MIN / 10 == result && LONG_MIN % 10 < *string)) {
+        if (LONG_MIN / 10 > result || (LONG_MIN / 10 == result && LONG_MIN % 10 < *string)) {
             return (int)LONG_MIN;
         }
     }
@@ -61,6 +61,5 @@ int ft_atoi(const char *string)
     result = 10 * result + (*string - '0');
     string++;
  }
-
- return (int)result * sign;
+ return (int)(result * sign);
 }
