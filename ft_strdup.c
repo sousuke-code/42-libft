@@ -6,11 +6,10 @@
 /*   By: miyatasoujo <miyatasoujo@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 01:19:58 by miyatasoujo       #+#    #+#             */
-/*   Updated: 2024/10/29 09:45:47 by miyatasoujo      ###   ########.fr       */
+/*   Updated: 2024/10/30 09:56:06 by miyatasoujo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 

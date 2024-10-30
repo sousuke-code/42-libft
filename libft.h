@@ -6,7 +6,7 @@
 /*   By: miyatasoujo <miyatasoujo@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 15:35:33 by sosmiyat          #+#    #+#             */
-/*   Updated: 2024/10/28 00:06:43 by miyatasoujo      ###   ########.fr       */
+/*   Updated: 2024/10/30 09:56:03 by miyatasoujo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 
 #include <stdio.h>
 #include <unistd.h>
+#include <stdlib.h>
 
 int ft_atoi(const char *string);
 
@@ -76,6 +77,8 @@ int ft_strncmp(const char *s1, const char *s2, size_t n);
 char *ft_strnstr(const char *big, const char *little, size_t n);
 
 char *ft_strrchr(const char *s, int c);
+
+char *ft_strdup(const char *s1);
 
 char *ft_strtrim(char const *s1, char const *set);
 
