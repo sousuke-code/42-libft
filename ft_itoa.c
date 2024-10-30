@@ -6,7 +6,7 @@
 /*   By: miyatasoujo <miyatasoujo@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 01:05:31 by miyatasoujo       #+#    #+#             */
-/*   Updated: 2024/10/27 20:01:12 by miyatasoujo      ###   ########.fr       */
+/*   Updated: 2024/10/31 00:43:37 by miyatasoujo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,15 @@
 #include <stdlib.h>
 #include "libft.h"
 
-int	count_digits(int n)
+int	count_digits(long n)
 {
-	int	count;
+	size_t	count;
 
 	count = 0;
-	if (n <= 0)
+	if (n == 0)
+	 count = 1;
+	
+	if (n < 0)
 	{
 		n = -n;
 		count++;
@@ -39,20 +42,31 @@ int	count_digits(int n)
 
 char	*ft_itoa(int n)
 {
-	int		len;
+	size_t	len;
 	char	*str;
-
-	len = count_digits(n);
+	size_t sign;
+	long n_cpy;
+    
+	sign =0;
+	n_cpy = n;
+	len = count_digits(n_cpy);
 	str = malloc(len + 1);
-	if (n < 0)
+	if (str == NULL)
 	{
-		n = -n;
-		str[0] = '-';
+		return NULL;
 	}
-	while (n > 0)
+
+	str[len] = '\0';
+	if (n_cpy < 0)
 	{
-		str[len-1] = (n % 10) + '0';
-		n = n / 10;
+		str[0] = '-';
+		n_cpy = -n_cpy;
+		sign = 1;
+	}
+	while (len > sign)
+	{
+		str[len-1] = (n_cpy % 10) + '0';
+		n_cpy = n_cpy / 10;
 		len--;
 	}
 	return str;
