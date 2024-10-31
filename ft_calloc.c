@@ -6,7 +6,7 @@
 /*   By: miyatasoujo <miyatasoujo@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 00:56:29 by miyatasoujo       #+#    #+#             */
-/*   Updated: 2024/10/29 09:44:07 by miyatasoujo      ###   ########.fr       */
+/*   Updated: 2024/10/31 01:06:18 by miyatasoujo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,10 @@
 
 void *ft_calloc(size_t count, size_t size){
     void *block;
+
+    if (count > SIZE_MAX  / size)
+      return NULL;
+    
     block = malloc(count * size);
     if (block == NULL) {
         return NULL;

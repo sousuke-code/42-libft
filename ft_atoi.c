@@ -6,7 +6,7 @@
 /*   By: miyatasoujo <miyatasoujo@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 18:57:48 by miyatasoujo       #+#    #+#             */
-/*   Updated: 2024/10/29 10:07:16 by miyatasoujo      ###   ########.fr       */
+/*   Updated: 2024/10/31 10:53:19 by miyatasoujo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,9 @@
 
 int ft_atoi(const char *string)
 {
- long result;
- int sign;
+ long long result;
+ int  sign;
+ int digit;
  sign = 1;
  result = 0;
 
@@ -36,7 +37,7 @@ int ft_atoi(const char *string)
     string++;
  } 
 
- while((*string >= '0' && *string <= '9') && *string != '\0')
+ while(*string >= '0' && *string <= '9')
  {
 
     
@@ -44,22 +45,47 @@ int ft_atoi(const char *string)
     //ov_div =LONG_MAX / 10 
     //ov_mod = LONG_MAX % 10
     //numがov_divを超えた場合にオーバーフロー判定を行う。
+    digit = *string - '0';
 
-
-    if (sign == 1 ){
-        if ( LONG_MAX / 10 < result || (LONG_MAX / 10 == result && LONG_MAX % 10 > *string)) {
+             // 正のオーバーフローのチェック
+        if (sign == 1 && (result > LONG_MAX / 10 ||
+            (result == LONG_MAX / 10 && digit > LONG_MAX % 10))) {
             return (int)LONG_MAX;
         }
-    }
 
-    if (sign == -1){
-        if (LONG_MIN / 10 > result || (LONG_MIN / 10 == result && LONG_MIN % 10 < *string)) {
+        // 負のオーバーフローのチェック
+        if (sign == -1 && (result > LONG_MAX / 10 ||
+            (result == LONG_MAX / 10 && digit > LONG_MAX % 10))) {
             return (int)LONG_MIN;
         }
-    }
-    
-    result = 10 * result + (*string - '0');
+    result = 10 * result + digit;
     string++;
  }
  return (int)(result * sign);
+}
+
+void run_test(const char *test_str, long expected) {
+    long result = ft_atoi(test_str);
+    printf("Input: \"%s\"\n", test_str);
+    printf("Expected: %ld, Result: %ld\n", expected, result);
+}
+
+int main() {
+    run_test("2147483647", 2147483647L); // INT_MAX
+    run_test("-2147483648", -2147483648L); // INT_MIN
+    run_test("9223372036854775807", LONG_MAX); // LONG_MAX
+    run_test("-9223372036854775808", LONG_MIN); // LONG_MIN
+    run_test("9223372036854775808", LONG_MAX); // Overflow
+    run_test("-9223372036854775809", LONG_MIN); // Underflow
+
+    // 追加のテストケース
+    run_test("-123", -123L);
+
+    // 先頭に空白がある数値
+    run_test("\t\n  -123", -123L);
+
+    // 無効な文字が含まれている
+    run_test("123abc", 123L);
+
+    return 0;
 }

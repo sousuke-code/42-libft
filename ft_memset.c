@@ -6,14 +6,13 @@
 /*   By: miyatasoujo <miyatasoujo@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 21:41:23 by miyatasoujo       #+#    #+#             */
-/*   Updated: 2024/10/27 20:01:42 by miyatasoujo      ###   ########.fr       */
+/*   Updated: 2024/10/31 22:08:24 by miyatasoujo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#include <stdio.h>
 #include "libft.h"
-#define BUF_SIZE 16
+#include <stdio.h>
+#include <assert.h>
 
 void *ft_memset(void *s, int c, size_t n)
 {
@@ -23,6 +22,8 @@ void *ft_memset(void *s, int c, size_t n)
     
     // int c に関してはunsigned charに変換される
     // ｀nを0になるまでループさせ中で、cを
+    if (s == NULL || n == 0)
+      return NULL;
 
     unsigned char *p  = (unsigned char *)s;
 
@@ -34,3 +35,4 @@ void *ft_memset(void *s, int c, size_t n)
     }
     return s;
 }
+
