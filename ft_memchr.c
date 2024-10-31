@@ -6,7 +6,7 @@
 /*   By: miyatasoujo <miyatasoujo@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 09:46:56 by miyatasoujo       #+#    #+#             */
-/*   Updated: 2024/10/27 20:01:20 by miyatasoujo      ###   ########.fr       */
+/*   Updated: 2024/10/31 22:12:52 by miyatasoujo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@ void *ft_memchr(const void *s, int c, size_t n)
 {
     size_t i;
     i = 0;
+
+    if (s == NULL || n == 0)
+      return NULL;
 
     const unsigned char *p  =  (const unsigned char *)s;
     

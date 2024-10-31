@@ -6,7 +6,7 @@
 /*   By: miyatasoujo <miyatasoujo@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 21:29:12 by miyatasoujo       #+#    #+#             */
-/*   Updated: 2024/10/30 20:13:13 by miyatasoujo      ###   ########.fr       */
+/*   Updated: 2024/10/31 22:21:34 by miyatasoujo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 #include "libft.h"
 
 
-int ft_strlen(char *c)
+int ft_strlen(const char *c)
 {
-    int i;
+    size_t i;
 
     i = 0;
     
