@@ -3,37 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: miyatasoujo <miyatasoujo@student.42.fr>    +#+  +:+       +#+        */
+/*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 01:45:12 by miyatasoujo       #+#    #+#             */
-/*   Updated: 2024/10/27 23:58:09 by miyatasoujo      ###   ########.fr       */
+/*   Updated: 2024/11/02 16:50:42 by sosmiyat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "libft.h"
 
-void	*ft_memmove(void *dist, const void *src, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	//戻り値はdistのポインタを返す
-	// memsetとの違いはコピー元のメモリ領域とコピー先のメモリ領域が重なっても問題ない。
-	// オーナーラップの処理を行わないといけない。
-	// nを0になるまでループさせる中で、srcをn回分distに対してのコピーを行う
 	const unsigned char *src_cpy;
-	unsigned char *p = (unsigned char *)dist;
+	unsigned char *dst_cpy = (unsigned char *)dst;
 	src_cpy = (const unsigned char *)src;
 
-	if(dist == NULL && src == NULL) {
+	if(dst == NULL || src == NULL) {
 		return NULL;
-	}
+	} 
+	
 
-	while (n > 0)
+	while (len > 0)
 	{
-		*p = *src_cpy;
-		p++;
-		src_cpy++;
-		n--;
+		dst_cpy[len - 1] = src_cpy[len-1];
+		len--;
 	}
 
-	return (dist);
+	return (dst);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: miyatasoujo <miyatasoujo@student.42.fr>    +#+  +:+       +#+        */
+/*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 15:35:33 by sosmiyat          #+#    #+#             */
-/*   Updated: 2024/10/30 09:56:03 by miyatasoujo      ###   ########.fr       */
+/*   Updated: 2024/11/02 15:21:42 by sosmiyat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,8 +58,6 @@ char **ft_split(char const *s, char c);
 
 char *ft_strchr(const char *s, int c);
 
-char *strdup(const char *s1);
-
 void ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 char *ft_strjoin(char const *s1 , char const *s2);
@@ -68,7 +66,7 @@ size_t ft_strlcat(char *dst, const char *src, size_t dstsize);
 
 size_t ft_strlcpy(char *dst, const char *src, size_t size);
 
-int ft_strlen(char *c);
+int ft_strlen(const char *c);
 
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
@@ -86,6 +84,6 @@ char *ft_substr(char const *s, unsigned int start, size_t len);
 
 int ft_toupper(int c);
 
-int ft_toupper(int c);
+int ft_tolower(int c);
 
 #endif

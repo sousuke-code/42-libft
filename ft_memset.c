@@ -3,16 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: miyatasoujo <miyatasoujo@student.42.fr>    +#+  +:+       +#+        */
+/*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 21:41:23 by miyatasoujo       #+#    #+#             */
-/*   Updated: 2024/10/31 22:08:24 by miyatasoujo      ###   ########.fr       */
+/*   Updated: 2024/11/02 15:16:48 by sosmiyat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
-#include <assert.h>
 
 void *ft_memset(void *s, int c, size_t n)
 {

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: miyatasoujo <miyatasoujo@student.42.fr>    +#+  +:+       +#+        */
+/*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 22:13:07 by miyatasoujo       #+#    #+#             */
-/*   Updated: 2024/10/27 20:06:26 by miyatasoujo      ###   ########.fr       */
+/*   Updated: 2024/11/02 19:17:43 by sosmiyat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@
 
 int count_words (char const *s, char c)
 {
-    // s1="AAABBAAACCAAA"
-    // c= A
     int head_word_count;
     int i;
     head_word_count = 0;
@@ -35,15 +33,22 @@ int count_words (char const *s, char c)
     return i;
 }
 
+void frre_memory(char **str, int i)
+{
+  while(i > 0)
+  {
+    free(str[i]);
+    i--;
+  }
+  free(str);
+
+}
+
 
 
 
 char **ft_split(char const *s, char c)
 {
-    //分裂後のメモリを確保
-    //一つ一つの配列に対してコピーを行なっていく
-    //配列の要素数分のmallocを行う
-    //その後に、各配列に入れる文字数分のmallocを行い挿入を行なっていく。
     char **ans;
     int words_counts;
     int i;
@@ -62,6 +67,8 @@ char **ft_split(char const *s, char c)
                 s++;
             }
             ans[i] = malloc(len+1);
+            if (ans[i] == NULL)
+               frre_memory(ans, i);
             
             ft_memcpy(ans[i],p,len);
             ans[i][len] = '\0';
