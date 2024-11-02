@@ -6,7 +6,7 @@
 /*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 22:13:07 by miyatasoujo       #+#    #+#             */
-/*   Updated: 2024/11/02 19:17:43 by sosmiyat         ###   ########.fr       */
+/*   Updated: 2024/11/02 20:42:13 by sosmiyat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,15 +33,16 @@ int count_words (char const *s, char c)
     return i;
 }
 
-void frre_memory(char **str, int i)
+void frre_memory(char **str, int index)
 {
-  while(i > 0)
+  int i;
+  i = 0;
+  while(i < index)
   {
     free(str[i]);
     i--;
   }
   free(str);
-
 }
 
 
@@ -62,14 +63,15 @@ char **ft_split(char const *s, char c)
             char const *p = s;
             len = 0;
             while(*s && *s != c) {
-                //配列一つ分の要素数をカウント
+
                 len++;
                 s++;
             }
             ans[i] = malloc(len+1);
-            if (ans[i] == NULL)
+            if (ans[i] == NULL){
                frre_memory(ans, i);
-            
+               return  NULL;
+            }
             ft_memcpy(ans[i],p,len);
             ans[i][len] = '\0';
             i++;
@@ -80,4 +82,3 @@ char **ft_split(char const *s, char c)
 
     return ans;
 }
-
