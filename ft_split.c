@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
+/*   By: miyatasoujo <miyatasoujo@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 22:13:07 by miyatasoujo       #+#    #+#             */
-/*   Updated: 2024/11/02 20:42:13 by sosmiyat         ###   ########.fr       */
+/*   Updated: 2024/11/03 00:16:06 by miyatasoujo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ int count_words (char const *s, char c)
     int i;
     head_word_count = 0;
     i = 0;
+    if (c == '\0')
+      return 1;
     while(*s) {
        if (*s != c && head_word_count == 0) {
          head_word_count = 1;
@@ -33,14 +35,14 @@ int count_words (char const *s, char c)
     return i;
 }
 
-void frre_memory(char **str, int index)
+void free_memory(char **str, int index)
 {
   int i;
   i = 0;
   while(i < index)
   {
     free(str[i]);
-    i--;
+    i++;
   }
   free(str);
 }
@@ -52,13 +54,17 @@ char **ft_split(char const *s, char c)
 {
     char **ans;
     int words_counts;
-    int i;
-    int len;
+    size_t i;
+    size_t len;
     i = 0;
     words_counts = count_words(s,c);
+    
     ans = malloc((words_counts+1) * sizeof(char *));
+    if (ans == NULL)
+      return NULL;
 
     while(*s) {
+        
         if (*s != c) {
             char const *p = s;
             len = 0;
@@ -69,7 +75,7 @@ char **ft_split(char const *s, char c)
             }
             ans[i] = malloc(len+1);
             if (ans[i] == NULL){
-               frre_memory(ans, i);
+               free_memory(ans, i);
                return  NULL;
             }
             ft_memcpy(ans[i],p,len);
