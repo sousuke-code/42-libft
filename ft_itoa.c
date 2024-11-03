@@ -3,59 +3,51 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: miyatasoujo <miyatasoujo@student.42.fr>    +#+  +:+       +#+        */
+/*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 01:05:31 by miyatasoujo       #+#    #+#             */
-/*   Updated: 2024/10/31 00:43:37 by miyatasoujo      ###   ########.fr       */
+/*   Updated: 2024/11/03 17:08:40 by sosmiyat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
+#include <limits.h>
+#include <stdint.h>
+#include <stdlib.h>
 
-int	count_digits(long n)
+static int	count_digits(long num)
 {
 	size_t	count;
 
 	count = 0;
-	if (n == 0)
-	 count = 1;
-	
-	if (n < 0)
+	if (num == 0)
+		count = 1;
+	if (num < 0)
 	{
-		n = -n;
+		num = -num;
 		count++;
 	}
-
-	while (n > 0)
+	while (num > 0)
 	{
-		n = n / 10;
+		num = num / 10;
 		count++;
 	}
 	return (count);
 }
 
-// n = 162222
-// % =一位のくらい
-// / =1の位を除いた数
-
 char	*ft_itoa(int n)
 {
 	size_t	len;
+	size_t	sign;
 	char	*str;
-	size_t sign;
-	long n_cpy;
-    
-	sign =0;
+	long	n_cpy;
+
+	sign = 0;
 	n_cpy = n;
 	len = count_digits(n_cpy);
 	str = malloc(len + 1);
 	if (str == NULL)
-	{
-		return NULL;
-	}
-
+		return (NULL);
 	str[len] = '\0';
 	if (n_cpy < 0)
 	{
@@ -65,10 +57,9 @@ char	*ft_itoa(int n)
 	}
 	while (len > sign)
 	{
-		str[len-1] = (n_cpy % 10) + '0';
+		str[len - 1] = (n_cpy % 10) + '0';
 		n_cpy = n_cpy / 10;
 		len--;
 	}
-	return str;
+	return (str);
 }
-

@@ -6,25 +6,21 @@
 /*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 21:29:12 by miyatasoujo       #+#    #+#             */
-/*   Updated: 2024/11/02 15:20:02 by sosmiyat         ###   ########.fr       */
+/*   Updated: 2024/11/03 16:44:29 by sosmiyat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-
-int ft_strlen(const char *c)
+int	ft_strlen(const char *c)
 {
-    size_t i;
+	size_t	i;
 
-    i = 0;
-    
-    while(*c != '\0')
-    {
-     i++;
-     c++;
-    }
-
-    return i;
+	i = 0;
+	while (*c != '\0')
+	{
+		i++;
+		c++;
+	}
+	return (i);
 }
-

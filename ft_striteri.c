@@ -3,35 +3,34 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: miyatasoujo <miyatasoujo@student.42.fr>    +#+  +:+       +#+        */
+/*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 11:34:23 by sosmiyat          #+#    #+#             */
-/*   Updated: 2024/10/31 00:56:51 by miyatasoujo      ###   ########.fr       */
+/*   Updated: 2024/11/03 16:47:05 by sosmiyat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
-void change_words(unsigned int i, char *str)
+void	change_words(unsigned int i, char *str)
 {
-    //奇数文字目を"-"に変更する関数
-    if (i % 2 == 0) {
-      *str =  '-';
-    }
+	if (i % 2 == 0)
+	{
+		*str = '-';
+	}
 }
 
-void ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-    // 第一引数　反復処理の対象となる引数
-    // 各文字に適用する関数
-    if (s == NULL)
-      return ;
-    unsigned int i;
-    i = 0;
-    while(*s) {
-        f(i, s);
-        s++;
-        i++;
-    }
+	unsigned int	i;
+
+	if (s == NULL)
+		return ;
+	i = 0;
+	while (*s)
+	{
+		f(i, s);
+		s++;
+		i++;
+	}
 }
