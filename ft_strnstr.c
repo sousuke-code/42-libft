@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
+/*   By: miyatasoujo <miyatasoujo@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 16:12:52 by sosmiyat          #+#    #+#             */
-/*   Updated: 2024/11/04 15:23:01 by sosmiyat         ###   ########.fr       */
+/*   Updated: 2024/11/04 16:57:22 by miyatasoujo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+#include <string.h>
 
 char	*ft_strnstr(const char *big, const char *little, size_t n)
 {
@@ -28,5 +30,5 @@ char	*ft_strnstr(const char *big, const char *little, size_t n)
 		n--;
 		big++;
 	}
-	return (NULL);
+	return NULL;
 }
