@@ -6,7 +6,7 @@
 /*   By: miyatasoujo <miyatasoujo@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 22:13:07 by miyatasoujo       #+#    #+#             */
-/*   Updated: 2024/11/04 11:54:09 by miyatasoujo      ###   ########.fr       */
+/*   Updated: 2024/11/04 15:09:48 by miyatasoujo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,19 @@ void	free_memory(char **str, int index)
 	free(str);
 }
 
+static size_t	count_len(char const *s, char c)
+{
+	size_t	len;
+
+	len = 0;
+	while (*s && *s != c)
+	{
+		len++;
+		s++;
+	}
+	return (len);
+}
+
 static int	word_into_arry(char **array, const char *s, char c)
 {
 	size_t		len;
@@ -64,18 +77,14 @@ static int	word_into_arry(char **array, const char *s, char c)
 		if (*s != c)
 		{
 			p = s;
-			len = 0;
-			while (*s && *s != c)
-			{
-				len++;
-			    s++;
-			}
+			len = count_len(s, c);
 			array[i] = malloc(len + 1);
 			if (array[i] == NULL)
 				return (free_memory(array, i), -1);
 			ft_memcpy(array[i], p, len);
 			array[i][len] = '\0';
 			i++;
+			s += len;
 		}
 		else
 			s++;
