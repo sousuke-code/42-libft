@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: miyatasoujo <miyatasoujo@student.42.fr>    +#+  +:+       +#+        */
+/*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 09:46:56 by miyatasoujo       #+#    #+#             */
-/*   Updated: 2024/11/04 17:13:02 by miyatasoujo      ###   ########.fr       */
+/*   Updated: 2024/11/04 18:22:44 by sosmiyat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-

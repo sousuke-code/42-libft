@@ -50,10 +50,6 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
-# ダミーのボーナスターゲットを追加
-bonus:
-	@echo "No bonus implemented"
-
 # オブジェクトファイルを生成するルール
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: miyatasoujo <miyatasoujo@student.42.fr>    +#+  +:+       +#+        */
+/*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 16:12:52 by sosmiyat          #+#    #+#             */
-/*   Updated: 2024/11/04 16:57:22 by miyatasoujo      ###   ########.fr       */
+/*   Updated: 2024/11/04 18:20:34 by sosmiyat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t n)
 {
-	size_t		little_len;
+	size_t	little_len;
 
 	if (*little == '\0')
 	{
@@ -30,5 +30,5 @@ char	*ft_strnstr(const char *big, const char *little, size_t n)
 		n--;
 		big++;
 	}
-	return NULL;
+	return (NULL);
 }
