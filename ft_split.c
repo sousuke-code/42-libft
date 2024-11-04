@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
+/*   By: miyatasoujo <miyatasoujo@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 22:13:07 by miyatasoujo       #+#    #+#             */
-/*   Updated: 2024/11/03 18:42:28 by sosmiyat         ###   ########.fr       */
+/*   Updated: 2024/11/04 11:54:09 by miyatasoujo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,19 +52,13 @@ void	free_memory(char **str, int index)
 	free(str);
 }
 
-char	**ft_split(char const *s, char c)
+static int	word_into_arry(char **array, const char *s, char c)
 {
-	char		**ans;
-	int			words_counts;
-	size_t		i;
 	size_t		len;
+	size_t		i;
 	char const	*p;
 
 	i = 0;
-	words_counts = count_words(s, c);
-	ans = malloc((words_counts + 1) * sizeof(char *));
-	if (ans == NULL)
-		return (NULL);
 	while (*s)
 	{
 		if (*s != c)
@@ -74,23 +68,30 @@ char	**ft_split(char const *s, char c)
 			while (*s && *s != c)
 			{
 				len++;
-				s++;
+			    s++;
 			}
-			ans[i] = malloc(len + 1);
-			if (ans[i] == NULL)
-			{
-				free_memory(ans, i);
-				return (NULL);
-			}
-			ft_memcpy(ans[i], p, len);
-			ans[i][len] = '\0';
+			array[i] = malloc(len + 1);
+			if (array[i] == NULL)
+				return (free_memory(array, i), -1);
+			ft_memcpy(array[i], p, len);
+			array[i][len] = '\0';
 			i++;
 		}
 		else
-		{
 			s++;
-		}
 	}
-	ans[i] = NULL;
+	array[i] = NULL;
+	return (0);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**ans;
+
+	ans = malloc((count_words(s, c) + 1) * sizeof(char *));
+	if (ans == NULL)
+		return (NULL);
+	if (word_into_arry(ans, s, c) == -1)
+		return (NULL);
 	return (ans);
 }
