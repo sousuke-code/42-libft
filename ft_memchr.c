@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
+/*   By: miyatasoujo <miyatasoujo@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 09:46:56 by miyatasoujo       #+#    #+#             */
-/*   Updated: 2024/11/03 16:42:00 by sosmiyat         ###   ########.fr       */
+/*   Updated: 2024/11/04 17:13:02 by miyatasoujo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "string.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
@@ -30,3 +31,4 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
+

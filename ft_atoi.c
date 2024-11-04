@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
+/*   By: miyatasoujo <miyatasoujo@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 18:57:48 by miyatasoujo       #+#    #+#             */
-/*   Updated: 2024/11/03 12:07:29 by sosmiyat         ###   ########.fr       */
+/*   Updated: 2024/11/04 16:59:38 by miyatasoujo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <limits.h>
 
-const char	*ft_isspace(const char *string)
+static const char	*ft_isspace(const char *string)
 {
 	while (*string == '\t' || *string == '\n' || *string == '\v'
 		|| *string == '\f' || *string == '\r' || *string == ' ')
@@ -23,7 +23,7 @@ const char	*ft_isspace(const char *string)
 	return (string);
 }
 
-const char	*judge_sign(const char *string, int *sign)
+static const char	*judge_sign(const char *string, int *sign)
 {
 	if (*string == '+' || *string == '-')
 	{
