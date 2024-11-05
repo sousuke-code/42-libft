@@ -6,12 +6,11 @@
 /*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 13:01:01 by sosmiyat          #+#    #+#             */
-/*   Updated: 2024/11/04 18:20:22 by sosmiyat         ###   ########.fr       */
+/*   Updated: 2024/11/05 18:36:40 by sosmiyat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

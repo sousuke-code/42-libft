@@ -6,12 +6,11 @@
 /*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 17:50:47 by sosmiyat          #+#    #+#             */
-/*   Updated: 2024/11/05 17:50:50 by sosmiyat         ###   ########.fr       */
+/*   Updated: 2024/11/05 18:37:08 by sosmiyat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static int	pattern_match(char c, char *str)
 {

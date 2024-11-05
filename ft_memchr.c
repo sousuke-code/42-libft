@@ -6,12 +6,11 @@
 /*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 17:48:54 by sosmiyat          #+#    #+#             */
-/*   Updated: 2024/11/05 17:48:59 by sosmiyat         ###   ########.fr       */
+/*   Updated: 2024/11/05 18:34:42 by sosmiyat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "string.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

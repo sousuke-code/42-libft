@@ -6,12 +6,11 @@
 /*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 17:47:39 by sosmiyat          #+#    #+#             */
-/*   Updated: 2024/11/05 17:47:42 by sosmiyat         ###   ########.fr       */
+/*   Updated: 2024/11/05 18:33:44 by sosmiyat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "string.h"
 
 void	ft_bzero(void *s, size_t n)
 {

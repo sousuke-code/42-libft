@@ -6,14 +6,15 @@
 /*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 17:51:11 by sosmiyat          #+#    #+#             */
-/*   Updated: 2024/11/05 17:51:14 by sosmiyat         ###   ########.fr       */
+/*   Updated: 2024/11/05 18:37:21 by sosmiyat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdio.h>
+# include <limits.h>
+# include <stdint.h>
 # include <stdlib.h>
 # include <unistd.h>
 

@@ -6,12 +6,11 @@
 /*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 12:05:04 by sosmiyat          #+#    #+#             */
-/*   Updated: 2024/11/05 17:55:39 by sosmiyat         ###   ########.fr       */
+/*   Updated: 2024/11/05 18:36:53 by sosmiyat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 char	change_word(unsigned int i, char c)
 {

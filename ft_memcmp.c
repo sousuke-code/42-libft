@@ -6,12 +6,11 @@
 /*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 17:49:02 by sosmiyat          #+#    #+#             */
-/*   Updated: 2024/11/05 17:49:05 by sosmiyat         ###   ########.fr       */
+/*   Updated: 2024/11/05 18:34:47 by sosmiyat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "string.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

@@ -6,14 +6,11 @@
 /*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 17:48:45 by sosmiyat          #+#    #+#             */
-/*   Updated: 2024/11/05 17:48:50 by sosmiyat         ###   ########.fr       */
+/*   Updated: 2024/11/05 18:34:36 by sosmiyat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <limits.h>
-#include <stdint.h>
-#include <stdlib.h>
 
 static int	count_digits(long num)
 {

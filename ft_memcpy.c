@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/05 17:49:08 by sosmiyat          #+#    #+#             */
-/*   Updated: 2024/11/05 17:49:11 by sosmiyat         ###   ########.fr       */
+/*   Created: 2024/11/05 18:34:59 by sosmiyat          #+#    #+#             */
+/*   Updated: 2024/11/05 18:35:27 by sosmiyat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {

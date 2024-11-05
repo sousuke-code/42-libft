@@ -6,12 +6,11 @@
 /*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 17:47:16 by sosmiyat          #+#    #+#             */
-/*   Updated: 2024/11/05 17:47:34 by sosmiyat         ###   ########.fr       */
+/*   Updated: 2024/11/05 18:33:21 by sosmiyat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <limits.h>
 
 static const char	*ft_isspace(const char *string)
 {

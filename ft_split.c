@@ -6,13 +6,11 @@
 /*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 17:49:44 by sosmiyat          #+#    #+#             */
-/*   Updated: 2024/11/05 18:20:38 by sosmiyat         ###   ########.fr       */
+/*   Updated: 2024/11/05 18:36:30 by sosmiyat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 static int	count_words(char const *s, char c)
 {
