@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/23 09:46:56 by miyatasoujo       #+#    #+#             */
-/*   Updated: 2024/11/04 18:24:23 by sosmiyat         ###   ########.fr       */
+/*   Created: 2024/11/05 17:48:54 by sosmiyat          #+#    #+#             */
+/*   Updated: 2024/11/05 17:48:59 by sosmiyat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (i < n)
 	{
 		if (*p == (unsigned char)c)
-		{
 			return ((void *)p);
-		}
 		i++;
 		p++;
 	}

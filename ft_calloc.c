@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/26 00:56:29 by miyatasoujo       #+#    #+#             */
-/*   Updated: 2024/11/04 18:21:31 by sosmiyat         ###   ########.fr       */
+/*   Created: 2024/11/05 17:47:57 by sosmiyat          #+#    #+#             */
+/*   Updated: 2024/11/05 17:48:01 by sosmiyat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,7 @@ void	*ft_calloc(size_t count, size_t size)
 		return (NULL);
 	block = malloc(count * size);
 	if (block == NULL)
-	{
 		return (NULL);
-	}
 	ft_bzero(block, count * size);
 	return (block);
 }

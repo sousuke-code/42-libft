@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/22 20:54:54 by miyatasoujo       #+#    #+#             */
-/*   Updated: 2024/11/03 14:21:22 by sosmiyat         ###   ########.fr       */
+/*   Created: 2024/11/05 17:48:15 by sosmiyat          #+#    #+#             */
+/*   Updated: 2024/11/05 17:48:20 by sosmiyat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,9 @@
 int	ft_isalpha(int c)
 {
 	if (c >= 'A' && c <= 'Z')
-	{
 		return (1);
-	}
 	else if (c >= 'a' && c <= 'z')
-	{
 		return (1);
-	}
 	else
-	{
 		return (0);
-	}
 }

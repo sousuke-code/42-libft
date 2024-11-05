@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: miyatasoujo <miyatasoujo@student.42.fr>    +#+  +:+       +#+        */
+/*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/25 00:42:03 by miyatasoujo       #+#    #+#             */
-/*   Updated: 2024/11/04 17:06:13 by miyatasoujo      ###   ########.fr       */
+/*   Created: 2024/11/05 17:47:39 by sosmiyat          #+#    #+#             */
+/*   Updated: 2024/11/05 17:47:42 by sosmiyat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: miyatasoujo <miyatasoujo@student.42.fr>    +#+  +:+       +#+        */
+/*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/25 18:57:48 by miyatasoujo       #+#    #+#             */
-/*   Updated: 2024/11/04 16:59:38 by miyatasoujo      ###   ########.fr       */
+/*   Created: 2024/11/05 17:47:16 by sosmiyat          #+#    #+#             */
+/*   Updated: 2024/11/05 17:47:34 by sosmiyat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,9 @@ static const char	*judge_sign(const char *string, int *sign)
 
 int	ft_atoi(const char *string)
 {
-	long long	result;
-	int			sign;
-	int			digit;
+	long	result;
+	int		sign;
+	int		digit;
 
 	sign = 1;
 	result = 0;

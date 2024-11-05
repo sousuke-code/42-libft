@@ -1,6 +1,17 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/11/05 18:23:03 by sosmiyat          #+#    #+#              #
+#    Updated: 2024/11/05 18:23:21 by sosmiyat         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = libft.a
 
-# ソースファイルのリスト
 SRCS =	ft_strlen.c \
 		ft_strlcpy.c \
 		ft_strlcat.c \
@@ -34,7 +45,7 @@ SRCS =	ft_strlen.c \
 		ft_putchar_fd.c \
 		ft_putstr_fd.c \
 		ft_putendl_fd.c \
-		ft_putnbr_fd.c
+		ft_putnbr_fd.c \
 
 # オブジェクトファイルのリスト
 OBJS = $(SRCS:.c=.o)
@@ -54,11 +65,10 @@ $(NAME): $(OBJS)
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-# クリーンアップ
+
 clean:
 	rm -f $(OBJS)
 
-# 全ての生成ファイルの削除
 fclean: clean
 	rm -f $(NAME)
 

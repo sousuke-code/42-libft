@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: miyatasoujo <miyatasoujo@student.42.fr>    +#+  +:+       +#+        */
+/*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/26 22:13:07 by miyatasoujo       #+#    #+#             */
-/*   Updated: 2024/11/04 15:09:48 by miyatasoujo      ###   ########.fr       */
+/*   Created: 2024/11/05 17:49:44 by sosmiyat          #+#    #+#             */
+/*   Updated: 2024/11/05 18:20:38 by sosmiyat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int	count_words(char const *s, char c)
+static int	count_words(char const *s, char c)
 {
 	int	head_word_count;
 	int	i;
@@ -39,7 +39,7 @@ int	count_words(char const *s, char c)
 	return (i);
 }
 
-void	free_memory(char **str, int index)
+static void	free_memory(char **str, int index)
 {
 	int	i;
 
@@ -65,7 +65,7 @@ static size_t	count_len(char const *s, char c)
 	return (len);
 }
 
-static int	word_into_arry(char **array, const char *s, char c)
+static int	word_into_array(char **array, const char *s, char c)
 {
 	size_t		len;
 	size_t		i;
@@ -97,10 +97,12 @@ char	**ft_split(char const *s, char c)
 {
 	char	**ans;
 
+	if (s == NULL)
+		return (NULL);
 	ans = malloc((count_words(s, c) + 1) * sizeof(char *));
 	if (ans == NULL)
 		return (NULL);
-	if (word_into_arry(ans, s, c) == -1)
+	if (word_into_array(ans, s, c) == -1)
 		return (NULL);
 	return (ans);
 }

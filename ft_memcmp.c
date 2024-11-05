@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: miyatasoujo <miyatasoujo@student.42.fr>    +#+  +:+       +#+        */
+/*   By: sosmiyat <sosmiyat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/25 14:58:12 by sosmiyat          #+#    #+#             */
-/*   Updated: 2024/11/04 17:17:25 by miyatasoujo      ###   ########.fr       */
+/*   Created: 2024/11/05 17:49:02 by sosmiyat          #+#    #+#             */
+/*   Updated: 2024/11/05 17:49:05 by sosmiyat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	while (n > 0)
 	{
 		if (*p1 != *p2)
-		{
 			return (*p1 - *p2);
-		}
 		p1++;
 		p2++;
 		n--;
